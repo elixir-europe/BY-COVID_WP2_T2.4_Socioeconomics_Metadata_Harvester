@@ -7,7 +7,6 @@ WORKDIR /app
 RUN mkdir /install \
     && chown -Rv dspace: /install \
     && chown -Rv dspace: /app
-
 USER dspace
 
 # Copy the DSpace source code into the workdir (excluding .dockerignore contents)
