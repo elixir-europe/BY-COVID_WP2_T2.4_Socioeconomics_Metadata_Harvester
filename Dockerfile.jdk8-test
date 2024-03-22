@@ -62,3 +62,7 @@ COPY dspace/src/main/docker/test/rest_web.xml $DSPACE_INSTALL/webapps/rest/WEB-I
 
 RUN sed -i -e "s|\${dspace.dir}|$DSPACE_INSTALL|" $DSPACE_INSTALL/webapps/solr/WEB-INF/web.xml && \
     sed -i -e "s|\${dspace.dir}|$DSPACE_INSTALL|" $DSPACE_INSTALL/webapps/rest/WEB-INF/web.xml
+
+# Modify server.xml
+USER root
+RUN sed -i '/<\/Host>/i\        <Context docBase="/shared/omicsdi_xml_files" path="/xmls" \/>' /usr/local/tomcat/conf/server.xml

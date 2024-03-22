@@ -1,0 +1,5 @@
+*.pyc
+*.yaml
+*.egg-info
+*.coverage
+.vscode/**/*

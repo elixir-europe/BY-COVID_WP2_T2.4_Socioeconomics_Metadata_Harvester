@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='utf8'?>
+<codeBook xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd">
+    <docDscr>
+      <citation>
+        <titlStmt>
+          <titl xml:lang="en">DDI description: Citizens' Pulse 5/2021</titl>
+        </titlStmt>
+        <prodStmt>
+          <producer xml:lang="fi" abbr="FSD">Yhteiskuntatieteellinen tietoarkisto</producer><producer xml:lang="en" abbr="FSD">Finnish Social Science Data Archive</producer>
+          <copyright xml:lang="fi">Yhteiskuntatieteellinen tietoarkisto</copyright><copyright xml:lang="en">Finnish Social Science Data Archive</copyright>
+        </prodStmt>
+        <holdings xml:lang="fi" URI="http://urn.fi/urn:nbn:fi:fsd:T-FSD3530" location="Yhteiskuntatieteellinen tietoarkisto FSD"/><holdings xml:lang="en" URI="http://urn.fi/urn:nbn:fi:fsd:T-FSD3530" location="Finnish Social Science Data Archive FSD"/>
+      </citation>
+    </docDscr>
+    <docDscr>
+      <citation>
+        <titlStmt>
+          <titl xml:lang="fi">DDI-kuvailu: Kansalaispulssi 5/2021</titl>
+        </titlStmt>
+      </citation>
+    </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl xml:lang="en">Citizens' Pulse 5/2021</titl>
+        <parTitl xml:lang="en">Citizens' Pulse 5/2021</parTitl><parTitl xml:lang="fi">Kansalaispulssi 5/2021</parTitl>
+        <IDNo xml:lang="fi" agency="FSD">FSD3530</IDNo><IDNo xml:lang="fi" agency="URN">urn:nbn:fi:fsd:T-FSD3530</IDNo><IDNo xml:lang="en" agency="FSD">FSD3530</IDNo><IDNo xml:lang="en" agency="URN">urn:nbn:fi:fsd:T-FSD3530</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty xml:lang="fi">Tilastokeskus</AuthEnty><AuthEnty xml:lang="fi">Valtioneuvoston kanslia</AuthEnty><AuthEnty xml:lang="en">Statistics Finland</AuthEnty><AuthEnty xml:lang="en">Prime Minister's Office</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <copyright xml:lang="fi">Tietoarkiston ja aineiston luovuttajan tekemän sopimuksen mukaisesti.</copyright><copyright xml:lang="en">In accordance with the agreement between FSD and the depositor.</copyright>
+        <prodDate xml:lang="fi">2021-04-27</prodDate><prodDate xml:lang="en">2021-05-20</prodDate>
+      </prodStmt>
+      <distStmt>
+        <distrbtr abbr="FSD" URI="https://www.fsd.tuni.fi/" xml:lang="fi">Yhteiskuntatieteellinen tietoarkisto</distrbtr><distrbtr abbr="FSD" URI="https://www.fsd.tuni.fi/" xml:lang="en">Finnish Social Science Data Archive</distrbtr>
+        <distDate xml:lang="fi" date="2021-04-27"/><distDate xml:lang="en" date="2021-04-27"/>
+      </distStmt>
+      <verStmt>
+        <version date="2021-04-26" xml:lang="fi"/><version date="2021-04-26" xml:lang="en"/>
+      </verStmt>
+      <holdings xml:lang="fi" URI="http://urn.fi/urn:nbn:fi:fsd:T-FSD3530" location="Yhteiskuntatieteellinen tietoarkisto FSD"/><holdings xml:lang="en" URI="http://urn.fi/urn:nbn:fi:fsd:T-FSD3530" location="Finnish Social Science Data Archive FSD"/>
+    </citation>
+    <citation>
+      <titlStmt>
+        <titl xml:lang="fi">Kansalaispulssi 5/2021</titl>
+      </titlStmt>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="COVID-19">COVID-19</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="koronavirukset">koronavirukset</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="luottamus">luottamus</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="viranomaiset">viranomaiset</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="mieliala">mieliala</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="kriisit">kriisit</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="toimeentulo">toimeentulo</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="terveys">terveys</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="tiedonkulku">tiedonkulku</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="toimintaohjeet">toimintaohjeet</keyword><keyword xml:lang="fi" vocab="YSO" vocabURI="http://www.yso.fi/onto/yso/" ID="viestintae">viestintä</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="bacterial_and_virus_diseases">bacterial and virus diseases</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id">COVID-19</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="dissemination_of_information">dissemination of information</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="emotional_states">emotional states</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="health">health</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="income">income</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="regulations">regulations</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="trust">trust</keyword><keyword xml:lang="en" vocab="ELSST" vocabURI="https://elsst.cessda.eu/id" ID="well-being_health">well-being (health)</keyword>
+        <topcClas xml:lang="fi" vocab="OKM" vocabURI="http://www.yso.fi/onto/okm-tieteenala/conceptscheme" ID="Yhteiskuntatieteet">Yhteiskuntatieteet</topcClas><topcClas xml:lang="fi" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Valtiovalta_julkinen_hallinto_poliittiset_organisaatiot_puolueet">Valtiovalta, julkinen hallinto, poliittiset organisaatiot, puolueet</topcClas><topcClas xml:lang="fi" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Sosiaaliset_olot_ja_indikaattorit">Sosiaaliset olot ja indikaattorit</topcClas><topcClas xml:lang="fi" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Sosiaalinen_kaeyttaeytyminen_ja_asenteet">Sosiaalinen käyttäytyminen ja asenteet</topcClas><topcClas xml:lang="fi" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Kansanterveys">Kansanterveys</topcClas><topcClas xml:lang="en" vocab="OKM" vocabURI="http://www.yso.fi/onto/okm-tieteenala/conceptscheme" ID="Social_sciences">Social sciences</topcClas><topcClas xml:lang="en" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Government_political_systems_and_organisations">Government, political systems and organisations</topcClas><topcClas xml:lang="en" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Social_conditions_and_indicators">Social conditions and indicators</topcClas><topcClas xml:lang="en" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Social_behaviour_and_attitudes">Social behaviour and attitudes</topcClas><topcClas xml:lang="en" vocab="CESSDA Topic Classification" vocabURI="https://vocabularies.cessda.eu/urn/urn:ddi:int.cessda.cv:TopicClassification:4.2" ID="Public_health">Public health</topcClas>
+      </subject>
+      <abstract xml:lang="fi">Kansalaispulssi selvittää suomalaisten korona-ajan mielipiteitä viranomaisten toiminnasta, tiedonkulusta sekä vastaajan mielialasta ja huolenaiheista. Vuoden 2021 viidennen kierroksen kyselyssä kartoitettiin vastaajien luottamusta viranomaisten ja instituutioiden toimintaan sekä toisiin ihmisiin. Tiedusteltiin myös arviota, kuinka hyvin viranomaiset olivat varautuneet koronan kaltaiseen tautiepidemiaan. Vastaajien mielialaa kartoitettiin kysymällä, kuinka paljon koronaepidemia sekä erilaiset terveyteen ja hyvinvointiin (esimerkiksi oma tai läheisten riski sairastua koronaan, terveydenhuoltojärjestelmän kestokyky, oman tai läheisten alkoholinkäytön hallinta) sekä toimeentuloon ja arkeen (oman tai läheisten toimeentulon riittävyys, riski joutua lomautetuksi tai työttömäksi, lasten koulunkäynti yms.) liittyvät asiat aiheuttavat huolta tällä hetkellä. Kysyttiin myös luottamuksesta tulevaisuuteen ja koetusta stressistä. Vastaajia pyydettiin myös arvioimaan suomalaisten kriisimielialaa tällä hetkellä. Tiedonsaantiin ja viestintään liittyen tiedusteltiin, kuinka hyvin vastaajat ovat saaneet tietoa koronakriisin vaikutuksista omaan arkeensa ja miten tasapuolista, luotettavaa, avointa ja selkeää viranomaisten viestintä on ollut. Korona-ajan toimintaa selvitettiin kysymällä, kuinka hyvin vastaajat ovat noudattanut viranomaisohjeita ja koronaviruksen leviämistä ehkäiseviä suosituksia. Kysyttiin myös mielipidettä rokottamisesta, rokotteiden kohdentamisesta, omasta aikomuksesta ottaa koronarokote sekä ihmisten liikkumisen rajoittamisesta koronaviruspandemian takia. Taustamuuttujina olivat vastaajan sukupuoli, ikäryhmä, maakunta, koulutus sekä tietoja kotitalouden rakenteesta ja taloudellisesta tilanteesta.</abstract><sumDscr>
+        <collDate xml:lang="fi" date="2021-04-07" event="start"/><collDate xml:lang="fi" date="2021-04-12" event="end"/><collDate xml:lang="en" date="2021-04-07" event="start"/><collDate xml:lang="en" date="2021-04-12" event="end"/>
+        <nation xml:lang="fi" abbr="FI">Suomi</nation><nation xml:lang="en" abbr="FI">Finland</nation>
+        <geogCover xml:lang="fi">Suomi</geogCover><geogCover xml:lang="en">Finland</geogCover>
+        <anlyUnit xml:lang="fi">Henkilö<concept>Individual</concept></anlyUnit><anlyUnit xml:lang="en">Individual<concept>Individual</concept></anlyUnit>
+        <universe xml:lang="fi" clusion="I">15-74-vuotiaat mannersuomalaiset</universe><universe xml:lang="en" clusion="I">People aged 15-74 residing in mainland Finland</universe>
+        <dataKind xml:lang="fi">Kvantitatiivinen</dataKind><dataKind xml:lang="en">Quantitative</dataKind>
+      </sumDscr>
+    <abstract xml:lang="en">The Citizens' Pulse surveys examine Finnish attitudes and opinions in the context of the coronavirus pandemic (COVID-19). Main themes in the surveys include the activity and communication of authorities, compliance with regulations, future expectations, trust, and the respondents' own state of mind. The fifth collection round of 2021 surveyed the respondents' trust in other people and in various institutions, such as the Finnish Government, the health care system, and the media. The respondents were asked to evaluate how well Finnish authorities (including the Government, Ministries, and other authorities such as the police and the Finnish Institute for Health and Welfare) had been prepared for disease outbreaks such as the coronavirus epidemic. The respondents' state of mind was examined with questions on various matters relating to health and well-being. The questions covered, for example, whether the respondents were worried about their own risk or the risk of people close to them of falling ill with COVID-19, the availability of health care for them and people close to them for issues unrelated to COVID-19, and their own mental well-being. Additionally, the respondents' concerns were charted with questions regarding livelihood and everyday life (e.g. whether they were worried about the adequacy of their income or the income of people close to them, the uncertainty regarding how long the exceptional circumstances would last, and their children's schooling). Next, the respondents' trust in their future and experiences of stress were surveyed. The respondents were asked to evaluate whether an atmosphere of crisis prevailed amongst Finns. The availability and findability of relevant information on the coronavirus crisis was charted. Compliance with coronavirus restrictions was examined by asking the respondents whether they had observed the restrictions and recommendations set by authorities for preventing transmission of the virus, including maintaining safe distances, washing hands regularly, wearing a face mask, avoiding touching the eyes, nose or mouth with unwashed hands, using a hand sanitiser when available in public places, and minimising contacts with people outside immediate family and friends. The respondents' views on the coronavirus vaccine and on whether people's freedom of movement should be restricted because of COVID-19 were also surveyed. Background variables included the respondent's gender, age group, NUTS3 region of residence, highest level of education, household composition, and perceived financial situation of household.</abstract></stdyInfo>
+    <method>
+      <dataColl>
+        <timeMeth xml:lang="fi">Pitkittäisaineisto: trendi/toistuva poikkileikkausaineisto<concept>Longitudinal.TrendRepeatedCrossSection</concept></timeMeth><timeMeth xml:lang="en">Longitudinal: Trend/Repeated cross-section<concept>Longitudinal.TrendRepeatedCrossSection</concept></timeMeth>
+        <collMode xml:lang="fi">Itsetäytettävä lomake: verkkolomake<concept/></collMode><collMode xml:lang="en">Self-administered questionnaire: Web-based (CAWI)<concept/></collMode>
+      </dataColl>
+    </method>
+    <dataAccs>
+      <useStmt>
+        <restrctn xml:lang="fi">Aineisto on (A) vapaasti käytettävissä ilman rekisteröitymistä (CC BY 4.0).</restrctn><citReq xml:lang="fi">Aineistoon ja sen tekijöihin tulee viitata asianmukaisesti kaikissa julkaisuissa ja esityksissä, joissa aineistoa käytetään. Tietoarkiston antaman malliviittaustiedon voi merkitä lähdeluetteloon sellaisenaan tai sitä voi muokata julkaisun käytäntöjen mukaisesti.</citReq><citReq xml:lang="en">The data and its creators shall be cited in all publications and presentations for which the data have been used. The bibliographic citation may be in the form suggested by the archive or in the form required by the publication.</citReq>
+        <deposReq xml:lang="fi">Tietoarkistoon on lähetettävä viitetiedot kaikista julkaisuista, joissa käyttäjä hyödyntää aineistoa.</deposReq><deposReq xml:lang="en">The user shall notify the archive of all publications where she or he has used the data.</deposReq>
+      <restrctn xml:lang="en">The dataset is (A) openly available for all users without registration (CC BY 4.0).</restrctn></useStmt>
+    </dataAccs>
+    <othrStdyMat>
+      <relPubl xml:lang="fi">
+        Kansalaispulssi 5/2021. Tutkimusseloste 14.4.2021 [verkkodokumentti]. Helsinki: Tilastokeskus.Tietovarannot/Tiedonkeruupalvelut. https://www.stat.fi/static/media/uploads/tup/htpalvelut/kansalaispulssi/kansalaispulssi_5_2021_tutkimusseloste.pdf [viitattu 28.4.2021]
+        <citation>
+          <titlStmt>
+            <titl xml:lang="fi"/>
+          </titlStmt>
+          <distStmt>
+            <distDate xml:lang="fi"/>
+          </distStmt>
+          <holdings xml:lang="fi"/>
+        </citation>
+      </relPubl><relPubl xml:lang="en">
+        Kansalaispulssi 5/2021. Tutkimusseloste 14.4.2021 [verkkodokumentti]. Helsinki: Tilastokeskus.Tietovarannot/Tiedonkeruupalvelut. https://www.stat.fi/static/media/uploads/tup/htpalvelut/kansalaispulssi/kansalaispulssi_5_2021_tutkimusseloste.pdf [viitattu 28.4.2021]
+        <citation>
+          <titlStmt>
+            <titl xml:lang="en"/>
+          </titlStmt>
+          <distStmt>
+            <distDate xml:lang="en"/>
+          </distStmt>
+          <holdings xml:lang="en"/>
+        </citation>
+      </relPubl>
+    </othrStdyMat>
+  </stdyDscr>
+  <fileDscr>
+    <fileTxt>
+      <fileName xml:lang="fi">daF3530.por</fileName>
+    </fileTxt>
+  </fileDscr>
+</codeBook>

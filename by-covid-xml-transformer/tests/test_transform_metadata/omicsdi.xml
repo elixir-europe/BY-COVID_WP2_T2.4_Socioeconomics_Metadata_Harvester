@@ -1,0 +1,25 @@
+<entry id="1">
+   <name>Citizens' Pulse 5/2021</name>
+   <description>The Citizens' Pulse surveys examine Finnish attitudes and opinions in the context of the coronavirus pandemic (COVID-19). Main themes in the surveys include the activity and communication of authorities, compliance with regulations, future expectations, trust, and the respondents' own state of mind. The fifth collection round of 2021 surveyed the respondents' trust in other people and in various institutions, such as the Finnish Government, the health care system, and the media. The respondents were asked to evaluate how well Finnish authorities (including the Government, Ministries, and other authorities such as the police and the Finnish Institute for Health and Welfare) had been prepared for disease outbreaks such as the coronavirus epidemic. The respondents' state of mind was examined with questions on various matters relating to health and well-being. The questions covered, for example, whether the respondents were worried about their own risk or the risk of people close to them of falling ill with COVID-19, the availability of health care for them and people close to them for issues unrelated to COVID-19, and their own mental well-being. Additionally, the respondents' concerns were charted with questions regarding livelihood and everyday life (e.g. whether they were worried about the adequacy of their income or the income of people close to them, the uncertainty regarding how long the exceptional circumstances would last, and their children's schooling). Next, the respondents' trust in their future and experiences of stress were surveyed. The respondents were asked to evaluate whether an atmosphere of crisis prevailed amongst Finns. The availability and findability of relevant information on the coronavirus crisis was charted. Compliance with coronavirus restrictions was examined by asking the respondents whether they had observed the restrictions and recommendations set by authorities for preventing transmission of the virus, including maintaining safe distances, washing hands regularly, wearing a face mask, avoiding touching the eyes, nose or mouth with unwashed hands, using a hand sanitiser when available in public places, and minimising contacts with people outside immediate family and friends. The respondents' views on the coronavirus vaccine and on whether people's freedom of movement should be restricted because of COVID-19 were also surveyed. Background variables included the respondent's gender, age group, NUTS3 region of residence, highest level of education, household composition, and perceived financial situation of household.</description>
+   <dates>
+      <date type="publication" value="2021-04-27"/>
+      <date type="updated" value="2021-04-26"/>
+      <date type="collection_start_date" value="2021-04-07"/>
+      <date type="collection_end_date" value="2021-04-12"/>
+   </dates>
+   <additional_fields>
+      <field name="full_dataset_link">http://urn.fi/urn:nbn:fi:fsd:T-FSD3530</field>
+      <field name="repository">Finnish Social Science Data Archive</field>
+      <field name="analysis_unit">Individual</field>
+      <field name="spatial_coverage">Finland</field>
+      <field name="persistent_identifier">urn:nbn:fi:fsd:T-FSD3530</field>
+      <field name="persistent_identifier_type">URN</field>
+      <field name="data_access">The dataset is (A) openly available for all users without registration (CC BY 4.0).</field>
+      <field name="universe_included">People aged 15-74 residing in mainland Finland</field>
+      <field name="collection_mode">Self-administered questionnaire: Web-based (CAWI)</field>
+      <field name="time_method">Longitudinal: Trend/Repeated cross-section</field>
+      <field name="author">Statistics Finland</field>
+      <field name="author">Prime Minister's Office</field>
+      <field name="keywords">bacterial and virus diseases; COVID-19; dissemination of information; emotional states; health; income; regulations; trust; well-being (health)</field>
+   </additional_fields>
+</entry>

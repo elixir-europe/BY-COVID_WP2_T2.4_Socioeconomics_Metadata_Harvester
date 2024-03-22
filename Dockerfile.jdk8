@@ -56,3 +56,7 @@ RUN ln -s $DSPACE_INSTALL/webapps/solr    /usr/local/tomcat/webapps/solr    && \
     ln -s $DSPACE_INSTALL/webapps/rdf     /usr/local/tomcat/webapps/rdf     && \
     ln -s $DSPACE_INSTALL/webapps/sword   /usr/local/tomcat/webapps/sword   && \
     ln -s $DSPACE_INSTALL/webapps/swordv2 /usr/local/tomcat/webapps/swordv2
+
+# Modify server.xml
+USER root
+RUN sed -i '/<\/Host>/i\        <Context docBase="/shared/omicsdi_xml_files" path="/xmls" \/>' /usr/local/tomcat/conf/server.xml

@@ -25,9 +25,25 @@ services:
     - solr_oai:/dspace/solr/oai/data
     - solr_search:/dspace/solr/search/data
     - solr_statistics:/dspace/solr/statistics/data
+    - xmlshare:/shared
+  transformer:
+    container_name: bycovid-transformer
+    depends_on:
+    - dspace
+    build:
+      context: .
+      dockerfile: Dockerfile.py3
+    networks:
+      dspacenet:
+    stdin_open: true
+    tty: true
+    volumes:
+    - xmlshare:/shared
+    command: /bin/bash
   dspacedb:
     container_name: bycovid-db
     environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       PGDATA: /pgdata
     image: dspace/dspace-postgres-pgcrypto
     networks:
@@ -43,3 +59,4 @@ volumes:
   solr_oai:
   solr_search:
   solr_statistics:
+  xmlshare:

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf8'?>
+<database>
+  <name>TEST Catalogue</name>
+  <description>TEST catalogue's description</description>
+  <release>Release-October-2022</release>
+  <release_date>2022-10-13</release_date>
+  <entry_count>2</entry_count>
+  <keywords>social sciences,humanities</keywords>
+  <url>https://example.com</url>
+  <entries>
+    <entry id="1">
+      <name>Citizens' Pulse 10/2021</name>
+      <description>The Citizens' Pulse surveys examine Finnish attitudes and opinions in the context of the coronavirus pandemic (COVID-19). Main themes in the surveys include the activity and communication of authorities, compliance with regulations, future expectations, trust, and the respondents' own state of mind. The tenth collection round of 2021 surveyed the respondents' opinions on the reliability of the information provided by various Finnish authorities (e.g. the Finnish Institute for Health and Welfare) and members of various groups (e.g. health care employees, researchers) on the coronavirus crisis. The respondents were asked to evaluate how fair or unfair they thought Finnish society was at present and how well Finnish authorities (including the Government, Ministries, and other authorities such as the police and the Finnish Institute for Health and Welfare) had been prepared for epidemics such as COVID-19. The respondents' state of mind was examined with questions on various matters relating to health and well-being. The questions covered, for example, whether the respondents were worried about their own risk or the risk of people close to them contracting COVID-19, the availability of health care for them and people close to them for issues unrelated to COVID-19, and their own mental well-being. Additionally, the respondents' concerns were charted with questions regarding livelihood and everyday life (e.g. whether they were worried about the adequacy of their income or the income of people close to them, the uncertainty regarding how long the exceptional circumstances would last, and their children's schooling). Next, the respondents' confidence in their future and experiences of stress were surveyed. The respondents were asked to evaluate whether an atmosphere of crisis prevailed amongst Finns. The availability and findability of relevant information on the coronavirus crisis was charted. Compliance with coronavirus restrictions was examined by asking the respondents whether they had followed the restrictions and recommendations set by authorities for preventing transmission of the virus, including maintaining safe distances, washing hands regularly, wearing a face mask, avoiding touching the eyes, nose or mouth with unwashed hands, using a hand sanitiser when it was available in public places, and minimising contacts with people outside immediate family and friends. Finally, the respondents' views on the coronavirus vaccine were surveyed, including whether they would be willing to get a COVID-19 vaccine for themselves or for their children. Background variables included the respondent's gender, age group, NUTS3 region of residence, highest level of education, household composition, and perceived financial situation of household.</description>
+      <dates>
+        <date type="publication" value="2021-10-07"/>
+        <date type="updated" value="2021-10-06"/>
+        <date type="collection_start_date">2021-08-04</date>
+        <date type="collection_end_date">2021-08-09</date>
+      </dates>
+      <additional_fields>
+        <field name="full_dataset_link">http://urn.fi/urn:nbn:fi:fsd:T-FSD3562</field>
+        <field name="repository">Finnish Social Science Data Archive</field>
+        <field name="analysis_unit">Individual</field>
+        <field name="spatial_coverage">Finland</field>
+        <field name="persistent_identifier">urn:nbn:fi:fsd:T-FSD3562</field>
+        <field name="persistent_identifier_type">URN</field>
+        <field name="data_access">The dataset is (A) openly available for all users without registration (CC BY 4.0).</field>
+        <field name="universe_included">People aged 15-74 residing in mainland Finland</field>
+        <field name="collection_mode">Self-administered questionnaire: Web-based (CAWI)</field>
+        <field name="time_method">Longitudinal: Trend/Repeated cross-section</field>
+        <field name="author">Statistics Finland</field>
+        <field name="author">Prime Minister's Office</field>
+        <field name="keywords">bacterial and virus diseases; COVID-19; dissemination of information; emotional states; health; income; regulations; trust; well-being (health)</field>
+      </additional_fields>
+    </entry>
+    <entry id="2">
+      <name>Growing Up in Scotland: Cohort 1, Sweep 10, Geography Data, Intermediate Geography and Local Authority, 2019-2020: Secure Access</name>
+      <description>Abstract copyright UK Data Service and data collection copyright owner. The Growing Up in Scotland (GUS) study is a large-scale longitudinal social survey which follows the lives of several groups of Scottish children from infancy through childhood and adolescence, and aims to provide important new information on children and their families in Scotland. The study forms a central part of the Scottish Government's strategy for the long-term monitoring and evaluation of its policies for children, with a specific focus on the early years. Unlike other similar cohort studies, this survey has a specifically Scottish focus. A key objective of GUS is to address a significant gap in the evidence base for early years policy monitoring and evaluation. The study seeks both to describe the characteristics, circumstances and experiences of children in their early years (and their parents) in Scotland and, through its longitudinal design, to generate a better understanding of how children's start in life can shape their longer term prospects and development. Since 2005, study design and data collection have been undertaken by ScotCen Social Research with collaborations with the Centre for Research on Families and Relationships, based at the University of Edinburgh and the MRC/CSO Social and Public Health Sciences Unit over certain periods of the project. The survey design consisted of recruiting an initial total of 8,000 parents in 2005, comprising two cohorts of children (5,000 from birth, 3,000 from age two years and ten months), and then interviewing parents annually until their child reached age five years ten months. Further fieldwork was undertaken with the birth cohort when the children were around eight, ten, twelve and fourteen years old.  A boost sample of 500 children from predominantly high deprivation areas was added to the cohort as part of the age 12 fieldwork. Data is collected via an in-home, face-to-face interview with self-complete sections. Fieldwork for sweep 10 was disrupted due to the COVID pandemic. As a result, the final portion of the data was collected via web and telephone questionnaires. Special Licence data: The main survey data are available under Special Licence: SN 5760 - Growing Up in Scotland: Cohort 1 SN 7432 - Growing Up in Scotland: Cohort 2 SN 8366 - Growing Up in Scotland: Cohort 1, Primary 6 Teacher Survey Secure Access Geographic Data: Geographic data are available under Secure Access and are separated by cohort, sweep and  type of geographic variable. Information is available on the GUS Access Data web page. Users must also include the main Growing Up in Scotland Special Licence data in the Accredited Researcher Proposal form and add it to their projects (please note there is no need for Secure Access users to complete a separate Special Licence application). Secure Access Early Learning and Childcare Administrative Data: Care Inspectorate quality information on the settings which provided children in Birth Cohort 1 and Birth Cohort  2 with their state-funded early learning and childcare (pre-school) entitlement when they were aged between 3 and 5 years old is available under SN 8543 (Birth Cohort 1) and SN 8544 (Birth Cohort 2).SN 8829 - Growing Up in Scotland: Cohort 1, Sweep 10, Geography Data, Intermediate Geography and Local Authority, 2019-2020: Secure Access This study contains a Local Authority variable and Intermediate Geography variable for GUS Cohort 1, Sweep 10.  An archive serial number variable is also included for matching to the main data files. These data have more restrictive access conditions than those available under Special Licence (see 'Access' section).  Main Topics :This study includes the following variables:     Archive serial number Local Authority Intermediate Zone</description>
+      <dates>
+        <date type="publication" value="2022-02-17T12:25:14Z"/>
+        <date type="updated" value="2022-02-23T10:05:59Z"/>
+        <date type="collection_start_date">2019-08-31T15:00:00Z</date>
+        <date type="collection_end_date">2020-09-29T15:00:00Z</date>
+      </dates>
+      <additional_fields>
+        <field name="full_dataset_link">http://doi.org/10.5255/UKDA-SN-8829-1</field>
+        <field name="repository">UK Data Service</field>
+        <field name="sample_protocol">No sampling (total universe)</field>
+        <field name="analysis_unit">Individuals</field>
+        <field name="analysis_unit">National</field>
+        <field name="spatial_coverage">Scotland</field>
+        <field name="persistent_identifier">10.5255/UKDA-SN-8829-1</field>
+        <field name="persistent_identifier_type">DOI</field>
+        <field name="data_access">The Data Collection is available to users registered with the UK Data Service. Commercial use is not permitted. Use of the data requires approval from the data owner or their nominee. Users must apply for access via a Secure Access application. Approved users must complete specialist training. Users must be based in the UK when accessing data. The Data Collection must be accessed via a secure virtual private network in a safe environment approved by the UK Data Service. Users must also include the main Growing Up in Scotland Cohort 1 data held under SN 5760 in the Accredited Researcher Proposal form and add it to their projects (please note there is no need to complete a separate Special Licence application).</field>
+        <field name="universe_included">Respondents to the main Growing Up in Scotland survey.</field>
+        <field name="collection_mode">Compilation/Synthesis</field>
+        <field name="time_method">Longitudinal/panel/cohort</field>
+        <field name="author">Scottish Centre for Social Research</field>
+        <field name="keywords">ADMINISTRATIVE AREAS; GEOGRAPHICALLY REFERENCED DATA; 2019-2020</field>
+      </additional_fields>
+    </entry>
+  </entries>
+</database>

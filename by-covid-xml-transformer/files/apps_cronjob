@@ -1,0 +1,1 @@
+0 3 * * * cd /home/apps && ./run_by_covid_xml_transformer.sh > logs/`date +\%Y\%m\%d\%H\%M\%S`-by-covid-xml-transformer-cron.log 2>&1 && ./validate_and_move_xmls.sh > logs/`date +\%Y\%m\%d\%H\%M\%S`-xml-validation-cron.log 2>&1

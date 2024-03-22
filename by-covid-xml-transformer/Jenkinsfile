@@ -1,0 +1,208 @@
+#!/usr/bin/env groovy
+
+// Example jenkinsfile that can be used as a template for
+// Python projects using tox, pylint and coverage.
+
+// Define global variable accordingly for each project
+// ---------------------------------------------------
+
+// node_name is the jenkins slave node. prefer labels instead of 
+// slave hostname
+node_name = 'default'
+// email_recipients is a comma separated list of recipients who will
+// receive the outcome of jenkins build
+// email_recipients is read from source code revision author.
+// Do not fill this
+email_recipients = ''
+// pylint_targets is a whitespace separated list of modules and
+// packages that are target of linting
+pylint_targets = 'by_covid_xml_transformer'
+
+// Adopters should only check for correct tox invocation commands
+// (tox -e <env>) below this point. The <env> must match with the
+// ones defined in tox.ini.
+
+def sendmail(build_result) {
+    stage('Send mail') {
+        mail(to: email_recipients,
+             subject: "${env.JOB_NAME} (${env.BUILD_NUMBER}) is ${build_result}",
+             body: "See info at ${env.BUILD_URL}")
+    }
+}
+
+// Discard old builds
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '30'))])
+
+// node reserves executor and workspace
+node(node_name) {
+    // Prepare
+    // -------
+
+    def toxEnvName = '.env-tox'
+    def pylintEnvName = '.env-pylint'
+    def sqScannerHome = tool 'SonarQube Scanner'
+    def pylint_report_path = 'pylint_report.txt'
+    def coverage_xml_path = 'coverage.xml'
+    def sonar_properties_path = 'sonar-project.properties'
+
+    // prepare workspace
+    def myworkspace = ''
+    // Get current node, to force concurrent steps to be run on the same node.
+    def current_node = "${env.NODE_NAME}"
+
+    // Parallelism causes stages to be run in different workspaces.
+    // Before submitting to SonarQube we need to make sure pylint_report
+    // coverage.xml and sonar-project.properties files are in-place.
+    // tasks shall be run in parallel
+    def tasks_1 = [:]
+    def tasks_2 = [:]
+
+    myworkspace = "${WORKSPACE}"
+    echo "My workspace is ${myworkspace}"
+    deleteDir()
+
+    // Get recipient from commit author
+    def scmVars = checkout scm
+    // Using Mercurial
+    //email_recipients = sh (
+    //    script: "hg log -r ${scmVars.MERCURIAL_REVISION} | grep ^user | sed -E \'s/(.*<)(.*)(>)/\\2/'",
+    //    returnStdout: true                                                                             
+    //)
+    
+    // Using Git
+    email_recipients = sh (
+        script: "git show -s --pretty=%ae",
+        returnStdout: true
+    )
+    echo "Build result will be sent to ${email_recipients}"
+
+
+    // Assign parallel tasks
+    // ---------------------
+
+    // This task will produce the coverage report and publish it
+    // for Jenkins
+    tasks_1['Prepare Tox, Run With Coverage & Publish Report'] = {
+        node(current_node) {
+            dir(myworkspace) {
+                stage('Prepare Tox Venv') {
+                    if (!fileExists(toxEnvName)) {
+                        echo 'Build Python Virtualenv for testing...'
+                        sh """
+                        python-latest -m venv ${toxEnvName}
+                        . ./${toxEnvName}/bin/activate
+                        pip install --upgrade pip
+                        pip install tox
+                        """
+                    }
+                }
+                stage('Run Test Suite & Gather Coverage') {
+                    sh """
+                    . ./${toxEnvName}/bin/activate
+                    tox -e with-coverage
+                    """
+                }
+                stage('Publish Cobertura Report') {
+                    cobertura(coberturaReportFile: "${coverage_xml_path}",
+                              zoomCoverageChart: false)
+                }
+            }
+        }
+    }
+    // This tasks will produce the pylint report and publish it
+    // for jenkins
+    tasks_1['Prepare Pylint, Run Analysis, Archive & Publish report'] = {
+        node(current_node) {
+            dir(myworkspace) {
+                stage('Prepare Pylint Venv') {
+                    if (!fileExists(pylintEnvName)) {
+                        echo 'Build Python Virtualenv for linting...'
+                        sh """
+                        python-latest -m venv ${pylintEnvName}
+                        . ./${pylintEnvName}/bin/activate
+                        pip install --upgrade pip
+                        pip install -r ./requirements.txt
+                        pip install .
+                        pip install pylint
+                        """
+                    }
+                }
+                stage('Run PyLint') {
+                    echo 'Run pylint'
+                    sh """
+                    . ./${pylintEnvName}/bin/activate
+                    pylint -f parseable ${pylint_targets} | tee ${pylint_report_path}
+                    """
+                }
+                stage('Archive PyLint Report') {
+                    archiveArtifacts artifacts: pylint_report_path
+                }
+                stage('Publish PyLint Report') {
+                    recordIssues tool: pyLint(pattern: pylint_report_path)
+                }
+            }
+        }
+    }
+    // Assign parallel testing tasks for each remaining tox testenv
+    tasks_2['Run Tests py38'] = {
+        node(current_node) {
+            dir(myworkspace) {
+                stage('Run Tests') {
+                    sh """
+                    . ./${toxEnvName}/bin/activate
+                    tox -e py38
+                    """
+                }
+            }
+        }
+    }
+    // Assign parallel testing tasks for each remaining tox testenv
+    tasks_2['Run Tests py39'] = {
+        node(current_node) {
+            dir(myworkspace) {
+                stage('Run Tests') {
+                    sh """
+                    . ./${toxEnvName}/bin/activate
+                    tox -e py39
+                    """
+                }
+            }
+        }
+    }
+    // Assing tasks to prepare sonar-project.properties and
+    // initiate SonarQube analysis
+    tasks_2['Publish Reports & Initiate SonarQube Analysis'] = {
+        node(current_node) {
+            dir(myworkspace) {
+                stage('Prepare sonar-project.properties') {
+                    sh "echo sonar.projectVersion = \$(cat VERSION) >> ${sonar_properties_path}"
+                }
+                stage('Initiate SonarQube analysis') {
+                    withSonarQubeEnv() {
+                        sh "${sqScannerHome}bin/sonar-scanner"
+                    }
+                }
+            }
+        }
+    }
+    // Run parallel tasks
+    // ------------------
+    try {
+        parallel tasks_1
+        parallel tasks_2
+    } catch (err) {
+        currentBuild.result = 'FAILURE'
+        sendmail('FAILURE')
+    }
+}
+// Wait for sonar quality gate
+stage("Quality Gate") {
+    timeout(time: 10, unit: 'MINUTES') { // Just in case something goes wrong, pipeline will be killed after a timeout
+        def qg = waitForQualityGate() // Reuse taskId previously collected by withSonarQubeEnv
+        if (qg.status != 'OK') {
+            echo "Pipeline unstable due to quality gate failure: ${qg.status}"
+            currentBuild.result = 'UNSTABLE'
+            sendmail('UNSTABLE')
+        }
+    }
+}

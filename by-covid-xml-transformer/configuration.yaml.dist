@@ -1,0 +1,45 @@
+[dspace_api]
+dspace_api_base_address: https://t2-4.by-covid.bsc.es/jspui/
+dspace_api_query: (covid%%20OR%%20covid-19)
+dspace_api_query_by_endpoint: {
+    'https://datacatalogue.cessda.eu/oai-pmh/v0/oai': '(covid%%20OR%%20covid-19)',
+    'https://covid19data.eui.eu/oai2d': 'handle'
+    }
+dspace_api_collection_by_endpoint: {
+    'https://datacatalogue.cessda.eu/oai-pmh/v0/oai': 'CESSDA',
+    'https://covid19data.eui.eu/oai2d': 'EUI'
+    }
+dspace_api_last_modified: 2022-04-30
+
+[read_write_metadata]
+harvest_directory_path: 
+transform_directory_path: 
+omicsdi_directory_path: 
+
+[transform_metadata]
+xslt_paths: {
+    'codeBook': '',
+    'dc': '',
+    'oai_datacite': ''
+    }
+database_information: {
+    "cessda": {"name": "CESSDA Data Catalogue",
+               "description": "The Consortium of European Social Science Data Archives Data Catalogue contains descriptions (metadata) of the more than 30,000 data collections held by CESSDA's Service Providers (SP), representing 20 European countries. It is a one-stop shop for searching and finding data, enabling effective access to European social science data. The data described are varied. They may be quantitative, qualitative or mixed-modes data, cross-sectional or longitudinal, recently collected or historical data.",
+               "keywords": "social sciences,humanities,surveys,interviews",
+               "url": "https://datacatalogue.cessda.eu/",
+               "search_url": ""},
+    "eui": {"name": "EUI COVID-19 SSH Data Portal",
+            "description": "The COVID-19 SSH Data Portal provides integrated search, discovery, and linking to datasets published on the web relevant for COVID-19-related research in the Social Sciences and Humanities. The COVID-19 SSH Data Portal is an initiative of the European University Institute.",
+            "keywords": "social sciences,humanities,covid-19",
+            "url": "https://covid19data.eui.eu/",
+            "search_url": ""}
+    }
+
+[oai_pmh]
+oai_pmh_metadata_format: oai_dc
+oai_pmh_metadata_format_by_endpoint: {
+    'https://datacatalogue.cessda.eu/oai-pmh/v0/oai': 'oai_ddi25',
+    'https://covid19data.eui.eu/oai2d': 'oai_datacite'
+    }
+oai_pmh_exclusion_list: [
+    ]
