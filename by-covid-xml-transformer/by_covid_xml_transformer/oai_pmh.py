@@ -5,6 +5,7 @@ import re
 from urllib.error import HTTPError
 from oaipmh.client import Client
 from oaipmh.metadata import MetadataRegistry, MetadataReader, oai_dc_reader
+from oaipmh.error import IdDoesNotExistError
 
 logger = logging.getLogger(__name__)
 
@@ -150,6 +151,12 @@ class OaiPmh():
         try:
             record = client.getRecord(metadataPrefix=_prefix, identifier=_id)
         except HTTPError:
+            record = [None, None, None]
+        except IdDoesNotExistError:
+            logger.error(f"Identifier does not exist: {_id}")
+            record = [None, None, None]
+        except Exception as e:
+            logger.error(f"An unexpected error occurred: {str(e)}")
             record = [None, None, None]
         return record
 

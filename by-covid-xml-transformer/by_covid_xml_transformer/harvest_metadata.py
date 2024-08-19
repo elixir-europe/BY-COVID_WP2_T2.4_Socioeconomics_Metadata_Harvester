@@ -116,7 +116,7 @@ def harvest_metadata(harvest_directory, harvest_directory_path, oai_pmh_args, ds
                         handle_harvested_record(record, harvest_directory, harvest_directory_path,
                                                 query_endpoint.split('.')[-2], metadata_format)
                 else:
-                    logger.info("Record %s has no metadata and will not be handled further", record[0].identifier())
+                    logger.info("Record from %s has no metadata and will not be handled further", oai_source)
         else:
             logger.warning("Handle dict list empty for endpoint %s with query %s and collection %s",
                            query_endpoint, query, collection)
