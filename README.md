@@ -1,6 +1,8 @@
 
 # BY-COVID WP2 T2.4 Metadata harvester and transformer
 
+This software implements the harvesting and transformation of socio-economic metadata for COVID-19 Data Portal. Work was done as a part of BY-COVID project Work Package 2 Task 2.4 and funded from Horizon Europe programme.
+
 ## Harvesting
 
 Harvesting tool has been implemented with the use and extension of the open-source software DSpace for the collection, processing, retrieving, searching, and browsing of the harvested metadata records. It can be customised to support different metadata schemes and different content providers. The basic protocol used for the harvesting process is OAI-PMH. The harvesting tool has been extended with a set of endpoints that allow for the search and retrieval of the metadata records programmatically based on specific business needs, including the consumption of the metadata records to the COVID-19 Data Portal. The API is based on Open API principles (RESTful) and provides JSON responses.
