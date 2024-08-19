@@ -1,4 +1,14 @@
 
+# BY-COVID WP2 T2.4 Metadata harvester and transformer
+
+## Harvesting
+
+Harvesting tool has been implemented with the use and extension of the open-source software DSpace for the collection, processing, retrieving, searching, and browsing of the harvested metadata records. It can be customised to support different metadata schemes and different content providers. The basic protocol used for the harvesting process is OAI-PMH. The harvesting tool has been extended with a set of endpoints that allow for the search and retrieval of the metadata records programmatically based on specific business needs, including the consumption of the metadata records to the COVID-19 Data Portal. The API is based on Open API principles (RESTful) and provides JSON responses.
+
+## XML Transformation
+
+XML transformation is done with a Python app (by-covid-xml-transformer) that uses the previously mentioned extended DSpace endpoints with query ‘COVID’ to get a list of records to harvest and link to where they can be harvested from. Those records are then harvested, processed (e.g. HTML tags removed) and transformed into extended OmicsDI format supported by the COVID-19 Data Portal. Transformation supports metadata that is in Dublin Core, DDI-Codebook 2.5 or DataCite format. The result is one XML file for every source. Those files are validated against OmicsDI schema and also validated to be valid XML before being publicly available for the portal to retrieve and use.
+
 # DSpace
 
 [![Build Status](https://travis-ci.org/DSpace/DSpace.png?branch=master)](https://travis-ci.org/DSpace/DSpace)
