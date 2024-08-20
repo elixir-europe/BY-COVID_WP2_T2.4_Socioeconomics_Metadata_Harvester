@@ -1,7 +1,7 @@
 
 # BY-COVID WP2 T2.4 Metadata harvester and transformer
 
-This software implements the harvesting and transformation of socio-economic metadata for COVID-19 Data Portal. Work was done as a part of BY-COVID project Work Package 2 Task 2.4 and funded from Horizon Europe programme.
+Implements the harvesting and transformation of socio-economic metadata for COVID-19 Data Portal. Work was done as a part of BY-COVID project Work Package 2 Task 2.4 and funded from Horizon Europe programme.
 
 ## Harvesting
 
